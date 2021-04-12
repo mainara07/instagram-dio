@@ -1,0 +1,161 @@
+/* para resetar todas as configurações que vem do navegador  */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+/* começa aplicando as configurações para o corpo da página de forma personalizada */
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: rgb(243, 243, 243);
+  display: flex;
+  justify-content: center;
+}
+
+/* configurando o primeiro e maior container da página onde está todo o conteúdo  */
+.instagram-wrapper {
+  display: flex;
+  /* display flex vai sempre alinhar o nosso conteudo em linha 
+  e o conteudo dele vai sempre respeitar o tamanho do container */
+  align-items: center; /* alinhamento vertical */
+  justify-content: start; /* alinhamento horizontal, neste caso começa da esquerda para direita*/
+  width: 60%;
+  height: 100vh;
+}
+
+.instragram-phone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.instragram-phone img {
+  height: 50rem;
+}
+
+.instagram-continue {
+  display: flex;
+  align-items: center; /* antes era vertical, agora vira horizontal */
+  justify-content: space-around; /* antes era horizontal, agora vira vertical*/
+  flex-direction: column; /* muda a direação de alinhamento do container*/
+  width: 50%;
+  min-height: 34rem;
+}
+
+.group {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  background: #fff;
+  width: 100%;
+  padding: 1.3rem 0;
+  border: 1px solid lightgray;
+}
+
+/* este seletor css pega os filhos do elemento selecionado, neste caso o primeiro filho da class group */
+.group:nth-child(1) {
+  min-height: 20rem;
+}
+
+.instragram-logo {
+    height: 3rem;
+}
+
+.profile-photo {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden; /*usado para imagem não exceder o tamanho da div*/
+    
+}
+
+.profile-photo {
+    height: 6rem;
+    margin: 6px;
+}
+
+.instagram-login {
+    background: #0095f6;
+    color: #fff;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.instagram-logout {
+    color: #0095f6;
+    margin-top: 1rem;
+}
+
+.not-account {
+    color: rgb(160, 160, 160)
+}
+
+.link-blue{
+    color:#0095f6;
+}
+
+.get-the-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1.3rem 0;
+}
+
+.download {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+}
+
+.app-download {
+    height: 3rem;
+    width: 10rem;
+    background-size: cover;
+}
+
+.app-download:nth-child(1) {
+    background-image: url('./img/appstore.png');
+}
+
+.app-download:nth-child(2) {
+    background-image: url('./img/googleplay.png');
+}
+
+/*media queries - criando responsividade para paágina*/
+
+@media (max-width:1024px) {
+    .instagram-wrapper {
+        width: 90%;
+    }
+}
+
+@media (max-width:650px) {
+    body {
+        background: #fff;
+    }
+    .instagram-wrapper {
+        width: 90%;
+    }
+    .instragram-phone {
+        display: none;
+    }
+    .instagram-continue {
+        width: 100%;
+    }
+    .group {
+        border: 1px solid transparent;
+    }
+}
